@@ -3,7 +3,7 @@
   "name": "PPT",
   "version": "1.0",
   "description": "Mengubah URL tertentu menjadi URL yang diinginkan.",
-  "permissions": ["tabs", "activeTab", "scripting"],
+  "permissions": ["tabs", "activeTab"],
   "action": {
     "default_icon": {
       "16": "icons/icon16.png",
