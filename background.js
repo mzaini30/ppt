@@ -4,15 +4,6 @@ chrome.action.onClicked.addListener((tab) => {
 
   if (tab.url.startsWith(githubPrefix)) {
     const newUrl = tab.url.replace(githubPrefix, newPrefix);
-
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      func: updateUrl,
-      args: [newUrl],
-    });
+    chrome.tabs.update(tab.id, { url: newUrl });
   }
 });
-
-function updateUrl(newUrl) {
-  window.history.pushState({}, "", newUrl);
-}
